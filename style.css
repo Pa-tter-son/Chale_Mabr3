@@ -1,0 +1,137 @@
+/* Import custom fonts */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('./fonts/MGN Edinson Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NewFont';
+    src: url('./fonts/Prince August.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+header {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+/* Logo */
+.logo img {
+    height: 65px;
+    width: auto;
+}
+
+/* Say Hello Button */
+.say-hello {
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+.say-hello:hover {
+    background: #f0f0f0;
+}
+
+/* Welcome Text */
+.welcometext {
+    color: white;
+    font-family: 'CustomFont', sans-serif;
+    font-size: 45px;
+    text-align: center;
+}
+
+/* Text Animation (Letters Disappear & Appear) */
+@keyframes fade-in-out {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.welcometext{
+    margin-bottom: -27%;
+}
+.animated-text {
+    animation: fade-in-out 3s infinite;
+}
+
+/* Bouncing Button */
+.bounce {
+    padding: 12px 24px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    animation: bounce 1.5s infinite;
+    transition: all 0.3s ease-in-out;
+}
+.bounce:hover {
+    background: #f0f0f0;
+}
+
+/* Button Bounce Animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Hero Section */
+.hero {
+    background: #34495e;
+    color: white;
+    text-align: center;
+    padding: 80px 30px;
+}
+.hero h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+.parent {
+    background: #fcfeff;
+    color: rgb(35, 29, 29);
+    text-align: center;
+    padding: 80px 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 11px;
+    grid-row-gap: 0px;
+    }
